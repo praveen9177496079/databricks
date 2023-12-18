@@ -1,10 +1,10 @@
 // Filename: Jenkinsfile
 node {
-  def GITREPOREMOTE = "https://github.com/<user-name>/<repo-name>.git"
-  def GITBRANCH     = "<release-branch-name>"
-  def DBCLIPATH     = "<databricks-cli-installation-path>"
-  def JQPATH        = "<jq-installation-path>"
-  def JOBPREFIX     = "<job-prefix-name>"
+  def GITREPOREMOTE = "https://github.com/praveen9177496079/databricks.git"
+  def GITBRANCH     = "main"
+  def DBCLIPATH     = "/usr/local/bin/databricks"
+  def JQPATH        = "/usr/bin/jq /usr/share/man/man1/jq.1.gz"
+  def JOBPREFIX     = "jenkins-demo"
   def BUNDLETARGET  = "dev"
 
   stage('Checkout') {
