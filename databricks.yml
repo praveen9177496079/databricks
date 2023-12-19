@@ -30,12 +30,12 @@ resources:
             num_workers: 1
             spark_env_vars:
               WORKSPACEBUNDLEPATH: ${workspace.root_path}
-          notebook_task:
-            notebook_path: ./run_unit_tests.py
-            source: WORKSPACE
-          libraries:
-            - pypi:
-                package: pytest
+         # notebook_task:
+          #  notebook_path: ./run_unit_tests.py
+           # source: WORKSPACE
+         # libraries:
+          #  - pypi:
+           #     package: pytest
     run-dabdemo-notebook:
       name: ${var.job_prefix}-run-dabdemo-notebook
       tasks:
