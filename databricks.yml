@@ -11,7 +11,7 @@ variables:
     default: 13.3.x-scala2.12
   node_type_id:
     description: The cluster's node type ID.
-    default: i3.xlarge
+    default: m5d.large
 
 artifacts:
   dabdemo-wheel:
@@ -46,11 +46,11 @@ resources:
             num_workers: 1
             spark_env_vars:
               WORKSPACEBUNDLEPATH: ${workspace.root_path}
-          notebook_task:
-            notebook_path: ./dabdemo_notebook.py
-            source: WORKSPACE
-          libraries:
-            - whl: "/Workspace${workspace.root_path}/files/Libraries/python/dabdemo/dist/dabdemo-0.0.1-py3-none-any.whl"
+         # notebook_task:
+          #  notebook_path: ./dabdemo_notebook.py
+           # source: WORKSPACE
+         # libraries:
+          #  - whl: "/Workspace${workspace.root_path}/files/Libraries/python/dabdemo/dist/dabdemo-0.0.1-py3-none-any.whl"
     evaluate-notebook-runs:
       name: ${var.job_prefix}-evaluate-notebook-runs
       tasks:
