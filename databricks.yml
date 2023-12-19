@@ -72,4 +72,4 @@ targets:
   dev:
     mode: development
     workspace:
-      host: https://dbc-58bf797c-e512.cloud.databricks.com
+      host: https://dbc-05bbb6c4-23cf.cloud.databricks.com
