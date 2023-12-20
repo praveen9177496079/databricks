@@ -3,7 +3,7 @@ node {
   def GITREPOREMOTE = "https://github.com/praveen9177496079/databricks.git"
   def GITBRANCH     = "main"
   def DBCLIPATH     = "/usr/local/bin/"
-  def JQPATH        = "/usr/bin/"
+  def JQPATH        = "/usr/bin/jq"
   def JOBPREFIX     = "jenkins-demo"
   def BUNDLETARGET  = "dev"
 
@@ -48,8 +48,8 @@ node {
 
     sh """#!/bin/bash
           ${DBCLIPATH}/databricks workspace export-dir \
-          ${DATABRICKS_BUNDLE_WORKSPACE_ROOT_PATH}/Validation/reports/junit/test-reports \
-          ${WORKSPACE}/Validation/reports/junit/test-reports \
+          ${DATABRICKS_BUNDLE_WORKSPACE_ROOT_PATH}/Validation/Output/test-results \
+          ${WORKSPACE}/Validation/Output/test-results \
           -t ${BUNDLETARGET} \
           --overwrite
        """
