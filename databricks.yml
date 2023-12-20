@@ -11,7 +11,7 @@ variables:
     default: 13.3.x-scala2.12
   node_type_id:
     description: The cluster's node type ID.
-    default: r3.xlarge
+    default: r3.2xlarge
 
 artifacts:
   dabdemo-wheel:
