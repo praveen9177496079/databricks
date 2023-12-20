@@ -39,8 +39,7 @@ node {
     def DATABRICKS_BUNDLE_WORKSPACE_ROOT_PATH
     def getPath = "${DBCLIPATH}/databricks bundle validate -t ${BUNDLETARGET} | ${JQPATH}/jq -r .workspace.file_path"
     def output = sh(script: getPath, returnStdout: true).trim()
-    echo ${DATABRICKS_BUNDLE_WORKSPACE_ROOT_PATH}
-    echo ${getPath}
+    
 
     if (output) {
       DATABRICKS_BUNDLE_WORKSPACE_ROOT_PATH = "${output}"
