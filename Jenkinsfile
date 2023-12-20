@@ -3,7 +3,7 @@ node {
   def GITREPOREMOTE = "https://github.com/praveen9177496079/databricks.git"
   def GITBRANCH     = "main"
   def DBCLIPATH     = "/usr/local/bin/"
-  def JQPATH        = "/usr/bin/jq"
+  def JQPATH        = "/usr/bin/"
   def JOBPREFIX     = "jenkins-demo"
   def BUNDLETARGET  = "dev"
 
