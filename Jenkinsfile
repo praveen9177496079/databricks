@@ -48,8 +48,8 @@ node {
 
     sh """#!/bin/bash
           ${DBCLIPATH}/databricks workspace export-dir \
-          ${DATABRICKS_BUNDLE_WORKSPACE_ROOT_PATH}/Validation/Output/test-results \
-          ${WORKSPACE}/Validation/Output/test-results \
+          ${DATABRICKS_BUNDLE_WORKSPACE_ROOT_PATH}/Validation/reports/junit/test-reports \
+          ${WORKSPACE}/Validation/reports/junit/test-reports \
           -t ${BUNDLETARGET} \
           --overwrite
        """
